@@ -155,25 +155,23 @@ $('.Select-box li').click(function(){
 $('.Select-box-2 li').click(function(){
 	var _tihs = $(this).attr('class');
 	var _html = $(this).html();
-	var _name = 'wd';
+	var _name = 'q';
 	if(_tihs == 'this_s'){
 		return "";
 	}
 	if(_tihs == 'baidu_s'){
-		_tihs = 'https://www.baidu.com/s';
-		_name = 'wd';
+		_tihs = 'https://www.bing.com/search';
+		_name = 'q';
 	}else if(_tihs == 'magi_s'){
 		_tihs = 'https://pubmed.ncbi.nlm.nih.gov/';
 		_name = 'term';
-	}else if(_tihs == 'bing_s'){
-		_tihs = 'https://www.bing.com/search';
-		_name = 'q';
+
 	}else if(_tihs == 'google_s'){
 		_tihs = 'https://www.google.com/search';
 		_name = 'q';
 	}else{
-		_tihs = 'https://www.baidu.com/s';
-		_name = 'wd';
+		_tihs = 'https://www.bing.com/search';
+		_name = 'q';
 	}
 	$('.baidu form').attr('action',_tihs);
 	$('.this_s').html(_html);
