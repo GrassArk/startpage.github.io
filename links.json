@@ -1,0 +1,125 @@
+{
+  "title": "StartPage",
+  "pages": {
+    "home": {
+      "blocks": [
+        {
+          "name": "1",
+          "links": [
+            {"name": "Pubmed", "url": "https://pubmed.ncbi.nlm.nih.gov/"},
+            {"name": "GeenMedical", "url": "https://www.geenmedical.com/"},
+            {"name": "cnki", "url": "https://www.cnki.net/"},
+            {"name": "中国专利查询", "url": "https://cponline.cnipa.gov.cn/"},
+            {"name": "Sci-Hub", "url": "https://sci-hub.red/"},
+            {"name": "Google Patents", "url": "https://patents.google.com/"},
+            {"name": "Patent Scope", "url": "https://www.wipo.int/en/web/patentscope"},
+            {"name": "术语在线", "url": "https://www.termonline.cn/"},
+            {"name": "Work", "url": "work.html"}
+          ]
+        },
+        {
+          "name": "2",
+          "links": [
+            {"name": "Proton Mail", "url": "https://mail.protonmail.com/login"},
+            {"name": "Google Mail", "url": "https://mail.google.com/mail"},
+            {"name": "163 Mail", "url": "https://mail.163.com/"},
+            {"name": "微信", "url": "https://wx.qq.com/?&lang=zh_CN"},
+            {"name": "Github", "url": "https://github.com/"},
+            {"name": "智谱", "url": "https://bigmodel.cn/usercenter/glm-coding/usage"},
+            {"name": "萤光云", "url": "https://console.ygcloud.com/dashboard"},
+            {"name": "Gemini", "url": "https://gemini.google.com/app"},
+            {"name": "CherryIN", "url": "https://open.cherryin.ai/console"}
+          ]
+        },
+        {
+          "name": "3",
+          "links": [
+            {"name": "t.bili", "url": "https://t.bilibili.com/"},
+            {"name": "later.bili", "url": "https://www.bilibili.com/watchlater/#/list"},
+            {"name": "movie.bili", "url": "https://www.bilibili.com/movie/index/#st=2&order=0&area=-1&style_id=-1&release_date=-1&season_status=-1&sort=0&page=1"},
+            {"name": "pixiv", "url": "https://www.pixiv.net/"},
+            {"name": "少数派", "url": "https://sspai.com/"},
+            {"name": "Keychron", "url": "https://launcher.keychron.com/"},
+            {"name": "Via", "url": "https://www.usevia.app/"},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""}
+          ]
+        },
+        {
+          "name": "4",
+          "links": [
+            {"name": "Notion", "url": "https://www.notion.so/"},
+            {"name": "语雀", "url": "https://www.yuque.com/dashboard/books"},
+            {"name": "iCloud", "url": "https://www.icloud.com/"},
+            {"name": "阿里云盘", "url": "https://www.aliyundrive.com/drive"},
+            {"name": "白描网页版", "url": "https://web.baimiaoapp.com/"},
+            {"name": "PDFgear", "url": "https://www.pdfgear.com/zh/"},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""}
+          ]
+        }
+      ]
+    },
+    "work": {
+      "blocks": [
+        {
+          "name": "1",
+          "links": [
+            {"name": "Home", "url": "index.html"},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""}
+          ]
+        },
+        {
+          "name": "2",
+          "links": [
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""}
+          ]
+        },
+        {
+          "name": "3",
+          "links": [
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""}
+          ]
+        },
+        {
+          "name": "4",
+          "links": [
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""},
+            {"name": "blank", "url": ""}
+          ]
+        }
+      ]
+    }
+  }
+}
