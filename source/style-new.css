@@ -53,25 +53,29 @@ body {
 }
 
 .search-container-main input {
-	padding: 15px 10px; /* 增加内边距 */
+	padding: 0 10px; /* 移除垂直 padding，改用固定高度 */
+    height: 50px; /* 固定高度 */
 	opacity: 0.9;
 	font-size: 16px; /* 增大字号 */
+    box-sizing: border-box;
 }
 
 #search-engine-wrapper {
     display: flex; /* 使用 Flexbox */
     width: 100%;
+    height: 50px; /* 确保容器高度一致 */
 }
 
 .search-engine-selector {
 	text-align: center;
 	position: relative;
     flex-shrink: 0; /* 防止选择器被压缩 */
+    height: 50px;
 }
 
 /* 搜索引擎选择器 - 半透明琥珀色背景（夕阳风格） */
 .search-engine-selector ul {
-	height: 46px;  /* 增加高度以匹配输入框 */
+	height: 48px;  /* 内容高度 48px + 上下边框各 1px = 50px */
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -84,12 +88,13 @@ body {
 	backdrop-filter: blur(5px);  /* 磨砂玻璃效果 */
 	-webkit-backdrop-filter: blur(5px);
     width: 80px; /* 固定宽度 */
+    box-sizing: content-box; /* 保持原有逻辑或统一为 border-box */
 }
 
 .search-engine-selector li {
 	width: 100%;
-	line-height: normal;  /* 重置line-height */
-	padding: 15px 0;  /* 增加 padding */
+	line-height: 48px;  /* 使用 line-height 居中文字 */
+	padding: 0;  /* 移除 padding */
 	font-size: 16px; /* 增大字号 */
 	color: #FFF;  /* 白色文字 */
 	border: 0;
@@ -147,7 +152,7 @@ body {
     position: absolute;
     right: 10px; /* 相对于 form 定位 */
     top: 0;
-    height: 49px; /* 增加高度以匹配输入框 */
+    height: 50px; /* 统一高度为 50px */
     font-size: 16px; /* 增大字号 */
 }
 
@@ -167,7 +172,7 @@ body {
 .search-clear-btn {
 	position: absolute;
 	right: 110px; /* 调整位置，避开搜索按钮 */
-	top: 15px; /* 调整位置 */
+	top: 16px; /* 居中对齐 50px 高度的输入框 */
 	width: 18px;
 	height: 18px;
 	background: rgba(0, 0, 0, 0.1);
