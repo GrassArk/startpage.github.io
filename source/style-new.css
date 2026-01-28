@@ -213,7 +213,7 @@ body {
     display: flex;
     flex-wrap: wrap; /* 允许换行 */
     justify-content: center; /* 居中对齐 */
-    gap: 20px; /* 块之间的间距 */
+    gap: 40px; /* 增加间距以防止拥挤 */
 }
 
 /* ==================== 链接区块（动态生成） ==================== */
@@ -222,7 +222,7 @@ body {
     max-width: 550px; /* 保持原有最大宽度 */
 	margin-right: 0;
 	float: none; /* 移除 float */
-	margin-bottom: 20px;
+	margin-bottom: 30px; /* 增加底部间距 */
     background: rgba(0, 0, 0, 0.15); /* 轻微背景增强可读性 */
     border-radius: 8px;
     padding: 10px;
@@ -305,6 +305,10 @@ body {
 
 /* 平板与手机屏幕 (小于 768px) */
 @media screen and (max-width: 768px) {
+    .content {
+        width: 96%; /* 减少两侧空余 */
+    }
+
     .search-container-main {
         padding-top: 50px;
         height: auto;
@@ -345,6 +349,6 @@ body {
     }
     
     .content {
-        width: 95%;
+        width: 98%; /* 极窄边距 */
     }
 }
