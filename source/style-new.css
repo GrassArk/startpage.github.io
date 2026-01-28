@@ -75,7 +75,7 @@ body {
 
 /* 搜索引擎选择器 - 半透明琥珀色背景（夕阳风格） */
 .search-engine-selector ul {
-	height: 48px;  /* 内容高度 48px + 上下边框各 1px = 50px */
+	height: 50px;  /* 统一高度为 50px */
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -88,18 +88,18 @@ body {
 	backdrop-filter: blur(5px);  /* 磨砂玻璃效果 */
 	-webkit-backdrop-filter: blur(5px);
     width: 80px; /* 固定宽度 */
-    box-sizing: content-box; /* 保持原有逻辑或统一为 border-box */
+    box-sizing: border-box; /* 统一使用 border-box */
 }
 
 .search-engine-selector li {
 	width: 100%;
-	line-height: 48px;  /* 使用 line-height 居中文字 */
+	line-height: 48px;  /* 50px 高度减去上下 1px 边框 = 48px */
 	padding: 0;  /* 移除 padding */
 	font-size: 16px; /* 增大字号 */
 	color: #FFF;  /* 白色文字 */
 	border: 0;
 	cursor: pointer;
-	box-sizing: border-box;  /* 确保padding不影响总高度 */
+	box-sizing: border-box; 
 	transition: all 0.3s ease;  /* 平滑过渡 */
     float: none; /* 清除 float */
 }
