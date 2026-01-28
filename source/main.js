@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.style.height = 'auto';
         });
         searchSelectorUl.addEventListener('mouseleave', function() {
-            this.style.height = '46px';
+            this.style.height = '50px';
         });
 
         // 搜索引擎切换功能
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // 收起下拉菜单
-            searchSelectorUl.style.height = '46px';
+            searchSelectorUl.style.height = '50px';
         });
     }
 
