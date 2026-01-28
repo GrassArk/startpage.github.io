@@ -68,8 +68,8 @@ $('.search-engine-selector li').click(function() {
 	$('.search-engine-selector li').removeClass('selected');
 	$(this).addClass('selected');
 
-	// 更新显示的搜索引擎名称
-	$('.search-engine-selector .selected').html(engineName);
+	// 更新按钮显示的搜索引擎名称（更新第一个 li 元素）
+	$('.search-engine-selector li:first').html(engineName);
 
 	// 更新搜索输入框的 name 属性（不同搜索引擎使用不同的参数名）
 	$('#search-input').attr('name', config.paramName);
