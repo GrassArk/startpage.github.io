@@ -64,12 +64,11 @@ $('.search-engine-selector li').click(function() {
 	// 更新表单的 action 属性
 	$('.search-container form').attr('action', config.url);
 
-	// 移除所有搜索引擎项的 selected 类，并添加到当前点击项
+	// 移除所有搜索引擎项的 selected 类
 	$('.search-engine-selector li').removeClass('selected');
-	$(this).addClass('selected');
 
-	// 更新按钮显示的搜索引擎名称（更新第一个 li 元素）
-	$('.search-engine-selector li:first').html(engineName);
+	// 将当前选中的 li 元素移到列表第一位（这样按钮和下拉列表都显示正确）
+	$(this).addClass('selected').prependTo('.search-engine-selector ul');
 
 	// 更新搜索输入框的 name 属性（不同搜索引擎使用不同的参数名）
 	$('#search-input').attr('name', config.paramName);
