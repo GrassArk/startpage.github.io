@@ -22,7 +22,7 @@ body {
     transform: translateX(-50%);
     top:25%;
 }
-.qingkong{
+.search-clear-btn{
 	right: 115px;
 	top: 15px;
 }
@@ -43,27 +43,27 @@ body {
 <body>
 
 	<!-- 搜索框区域 -->
-	<div class="baidu baidu-2">
+	<div class="search-container search-container-main">
 		<!-- 搜索表单：默认使用 Google 搜索 -->
 		<form name="f" action="https://www.google.com/search" target="_blank">
-			<div id="Select-2">
+			<div id="search-engine-wrapper">
 				<!-- 搜索引擎选择器 -->
-				<div class="Select-box-2" id="baidu">
+				<div class="search-engine-selector" id="search-engine-box">
 					<ul style="height: 47px;">
 						<!-- 默认选中：Google -->
-						<li class="this_s">谷 歌</li>
+						<li class="selected engine-google">谷 歌</li>
 						<!-- 其他搜索引擎选项 -->
-						<li class="baidu_s">必 应</li>
-						<li class="magi_s">PubMed</li>
+						<li class="engine-bing">必 应</li>
+						<li class="engine-pubmed">PubMed</li>
 					</ul>
 				</div>
 				<!-- 搜索输入框 -->
-				<input name="q" id="kw-2" maxlength="100" autocomplete="off" type="text">
+				<input name="q" id="search-input" maxlength="100" autocomplete="off" type="text">
 			</div>
 			<!-- 清空按钮 -->
-			<div class="qingkong" id="qingkong" title="清空">x</div>
+			<div class="search-clear-btn" id="search-clear-btn" title="清空">x</div>
 			<!-- 提交按钮 -->
-			<input value="搜 索" id="su-2" type="submit">
+			<input value="搜 索" id="search-submit" type="submit">
 		</form>
 	</div>
 	<!-- 搜索框区域结束 -->
