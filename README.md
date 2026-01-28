@@ -150,3 +150,23 @@
    - 这是一个单页应用，通过 `?page=` 参数路由。
    - 页面标题和 Favicon 会根据当前 `page` 动态更新。
 4. **提交**: 使用 `./deploy.sh` 进行部署，保持提交信息简洁且不含隐私。
+
+---
+
+## 高级配置 (Advanced)
+
+### 修改搜索引擎
+
+搜索引擎配置位于 `source/main.js` 文件顶部的 `SEARCH_ENGINES` 常量中。
+
+```javascript
+const SEARCH_ENGINES = {
+    'engine-google': {
+        url: 'https://www.google.com/search',
+        paramName: 'q'
+    },
+    // ... 添加更多引擎
+};
+```
+
+如需修改或添加，请直接编辑该文件，并在 HTML 中对应的 `<ul>` 列表中添加选项。
