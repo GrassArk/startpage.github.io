@@ -14,7 +14,7 @@
             {"name": "Google Patents", "url": "https://patents.google.com/"},
             {"name": "Patent Scope", "url": "https://www.wipo.int/en/web/patentscope"},
             {"name": "术语在线", "url": "https://www.termonline.cn/"},
-            {"name": "Work", "url": "work.html"}
+            {"name": "Work", "url": "?page=work"}
           ]
         },
         {
@@ -66,7 +66,7 @@
         {
           "name": "1",
           "links": [
-            {"name": "Home", "url": "index.html"},
+            {"name": "Home", "url": "?page=home"},
             {"name": "blank", "url": ""},
             {"name": "blank", "url": ""},
             {"name": "blank", "url": ""},
