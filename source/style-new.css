@@ -53,9 +53,9 @@ body {
 }
 
 .search-container-main input {
-	padding: 13px 8px;
+	padding: 15px 10px; /* 增加内边距 */
 	opacity: 0.9;
-	font-size: 15px;
+	font-size: 16px; /* 增大字号 */
 }
 
 #search-engine-wrapper {
@@ -71,7 +71,7 @@ body {
 
 /* 搜索引擎选择器 - 半透明琥珀色背景（夕阳风格） */
 .search-engine-selector ul {
-	height: 41px;  /* 内容高度，加上2px边框=43px实际高度，与搜索框匹配 */
+	height: 46px;  /* 增加高度以匹配输入框 */
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -89,8 +89,8 @@ body {
 .search-engine-selector li {
 	width: 100%;
 	line-height: normal;  /* 重置line-height */
-	padding: 13px 0;  /* 使用padding实现垂直居中，与搜索按钮一致 */
-	font-size: 15px;
+	padding: 15px 0;  /* 增加 padding */
+	font-size: 16px; /* 增大字号 */
 	color: #FFF;  /* 白色文字 */
 	border: 0;
 	cursor: pointer;
@@ -147,7 +147,8 @@ body {
     position: absolute;
     right: 10px; /* 相对于 form 定位 */
     top: 0;
-    height: 43px; /* 与输入框高度一致 */
+    height: 49px; /* 增加高度以匹配输入框 */
+    font-size: 16px; /* 增大字号 */
 }
 
 #search-submit:hover {
@@ -166,7 +167,7 @@ body {
 .search-clear-btn {
 	position: absolute;
 	right: 110px; /* 调整位置，避开搜索按钮 */
-	top: 13px;
+	top: 15px; /* 调整位置 */
 	width: 18px;
 	height: 18px;
 	background: rgba(0, 0, 0, 0.1);
@@ -196,7 +197,7 @@ body {
 
 .content {
 	width: 90%;
-    max-width: 1200px;
+    max-width: 1400px; /* 进一步增加最大宽度 */
 	overflow: hidden;
 	margin: 30px auto;
     /* 移除绝对定位，使用 Flexbox 布局 */
@@ -213,7 +214,7 @@ body {
     display: flex;
     flex-wrap: wrap; /* 允许换行 */
     justify-content: center; /* 居中对齐 */
-    gap: 40px; /* 增加间距以防止拥挤 */
+    gap: 60px; /* 进一步增加间距，让区块向左右分开 */
 }
 
 /* ==================== 链接区块（动态生成） ==================== */
@@ -225,16 +226,16 @@ body {
 	margin-bottom: 30px; /* 增加底部间距 */
     background: rgba(0, 0, 0, 0.15); /* 轻微背景增强可读性 */
     border-radius: 8px;
-    padding: 10px;
+    padding: 15px; /* 增加内边距 */
     box-sizing: border-box;
 }
 
 .jj-list-tit {
-	font-size: 16px;
-	line-height: 25px;
+	font-size: 18px; /* 增大区块标题字号 */
+	line-height: 30px;
 	color: #ffffff;
 	padding-left: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -242,14 +243,14 @@ body {
 	overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px; /* 增加链接间隙 */
     justify-content: flex-start;
 }
 
 .jj-list-con li {
     /* 计算宽度：(100% - (间隙 * (列数-1))) / 列数 */
     /* 3列布局示例 */
-	width: calc((100% - 20px) / 3); 
+	width: calc((100% - 24px) / 3); 
 	margin: 0;
     float: none;
 }
@@ -258,9 +259,9 @@ body {
 	display: block;
 	background: rgba(0, 0, 0, .35);
 	color: #FFF;
-	font-size: 13px;
+	font-size: 15px; /* 增大链接字号 */
 	text-align: center;
-	line-height: 35px;
+	line-height: 40px; /* 增加行高，增大按钮感 */
 	padding: 4px 0;
 	border-radius: 4px;
 	transition: all 0.2s;
