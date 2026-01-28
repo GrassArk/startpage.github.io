@@ -5,39 +5,7 @@
 <link rel="icon" href="source/favicon.svg" type="image/svg+xml">
 
 <link href="source/style-new.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src=source/jquery.js></script>
 
-<style type="text/css">
-<!--
-body {
-    background-image: url("source/background.png");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-}
-.content{
-	width: 1100px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top:25%;
-}
-.search-clear-btn{
-	right: 115px;
-	top: 15px;
-}
-.footer {
-	color:#ffffff;
-	font-size:12px;
-	text-align: center;
-	position: absolute;
-	bottom: 2%;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
--->
-</style>
 </head>
 
 <body>
@@ -79,13 +47,12 @@ body {
 
  <div class="footer">修改自<a href="https://www.jianavi.com/" style="color:#ffffff;" target="_blank">简约导航</a> | <a href="https://github.com/GrassArk/startpage.github.io" style="color:#ffffff;" target="_blank">项目源码</a></div>
 
-<script type="text/javascript" src="source/jquery.js"></script>
 <script type="text/javascript" src="source/main.js"></script>
 
 <script>
-	// 获取当前页面名称（用于从 links.json 读取对应配置）
-	// work.html 使用 "work"，index.html 使用 "home"
-	const currentPageName = window.location.pathname.endsWith('work.html') ? 'work' : 'home';
+	// 获取页面参数，默认为 home
+	const urlParams = new URLSearchParams(window.location.search);
+	const currentPageName = urlParams.get('page') || 'home';
 
 	// 从 links.json 加载配置并生成链接
 	fetch('links.json')
@@ -95,8 +62,15 @@ body {
 			const pageData = data.pages[currentPageName];
 
 			if (!pageData) {
-				container.innerHTML = '<p style="color:white;text-align:center;">页面配置未找到</p>';
+				container.innerHTML = `<p style="color:white;text-align:center;">页面配置 "${currentPageName}" 未找到</p>`;
 				return;
+			}
+
+			// 动态更新标题和图标
+			document.title = currentPageName === 'home' ? data.title : `${data.title} - ${currentPageName.charAt(0).toUpperCase() + currentPageName.slice(1)}`;
+			const favicon = document.querySelector('link[rel="icon"]');
+			if (favicon) {
+				favicon.href = currentPageName === 'work' ? 'source/favicon-work.svg' : 'source/favicon.svg';
 			}
 
 			pageData.blocks.forEach(block => {
@@ -114,7 +88,16 @@ body {
 				block.links.forEach(link => {
 					const li = document.createElement('li');
 					const a = document.createElement('a');
-					a.href = link.url;
+					
+					// 自动处理内部跳转，如果是跳转到 work.html 改为 ?page=work
+					if (link.url === 'work.html') {
+						a.href = '?page=work';
+					} else if (link.url === 'index.html') {
+						a.href = '?page=home';
+					} else {
+						a.href = link.url;
+					}
+
 					a.className = 'link-3';
 					a.textContent = link.name;
 					a.target = link.target || '_blank';
@@ -131,20 +114,16 @@ body {
 			document.getElementById('links-container').innerHTML = '<p style="color:white;text-align:center;">加载失败，请检查 links.json 文件</p>';
 		});
 
-	$(function(){
+    document.addEventListener('DOMContentLoaded', () => {
         initpage();
-        $(window).resize(function()
-        {
-          initpage();
-        })
+        window.addEventListener('resize', initpage);
 
-        function initpage()
-        {
-          var view_width = document.getElementsByTagName('html')[0].getBoundingClientRect().width;
-          var _html = document.getElementsByTagName('html')[0];
-          view_width>640?_html.style.fontSize=640/16 +'px':_html.style.fontSize =view_width/16+'px';
+        function initpage() {
+            var view_width = document.documentElement.getBoundingClientRect().width;
+            var _html = document.documentElement;
+            view_width > 640 ? _html.style.fontSize = 640 / 16 + 'px' : _html.style.fontSize = view_width / 16 + 'px';
         }
-      });
+    });
 </script>
 
 </body>
