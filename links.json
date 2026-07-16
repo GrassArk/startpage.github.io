@@ -54,7 +54,7 @@
             {"name": "阿里云盘", "url": "https://www.aliyundrive.com/drive"},
             {"name": "白描网页版", "url": "https://web.baimiaoapp.com/"},
             {"name": "PDFgear", "url": "https://www.pdfgear.com/zh/"},
-            {"name": "blank", "url": ""},
+            {"name": "PaddleOCR", "url": "https://aistudio.baidu.com/paddleocr/task/new"},
             {"name": "blank", "url": ""},
             {"name": "blank", "url": ""}
           ]
