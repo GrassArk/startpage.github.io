@@ -56,8 +56,6 @@
             {"name": "PaddleOCR", "url": "https://aistudio.baidu.com/paddleocr/task/new"},
             {"name": "deepseek-api", "url": "https://platform.deepseek.com/usage"},
             {"name": "kimi控制台", "url": "https://www.kimi.com/code/console?from=kfc_overview_topbar"},
-            {"name": "blank", "url": ""},
-            {"name": "blank", "url": ""},
             {"name": "blank", "url": ""}
           ]
         }
